@@ -1,0 +1,20 @@
+n8n Technical Overview and Core Architecture
+
+What is n8n?
+n8n is an extendable, low-code workflow automation tool designed to connect multiple applications and orchestrate complex technical processes without extensive custom coding. It combines traditional visual logic with built-in advanced AI capabilities.
+
+The Core Building Blocks: Nodes
+Every n8n workflow consists of visual steps called Nodes. Data flows sequentially or via branching logical structures from one node's output to the next node's input.
+1. Trigger Nodes: These nodes initiate the execution of a workflow based on external events (e.g., an incoming Webhook, a specific Schedule interval, or receiving a new Telegram message).
+2. Action Nodes: These regular nodes execute specific tasks like sending emails via Gmail, updating cells inside a Google Sheet, or interacting with databases.
+
+Advanced AI Capabilities in n8n
+Modern versions of n8n include dedicated AI Agent Nodes. These special nodes act as autonomous executors within a workflow and contain three vital integrated sub-components:
+- The LLM Brain: Connects to advanced foundation models (such as Google Gemini, OpenAI GPT, or Anthropic Claude) using secure API credentials.
+- Memory Nodes: Provide the AI Agent with session persistence, allowing it to remember past context and conversation history across execution turns.
+- Associated Tools: Allows the AI Agent to dynamically call other workflow branches or APIs (like a Google Drive downlader or PDF extractor) to fetch real-time data or perform external actions.
+
+Deployment Models
+Developers can choose between two main infrastructure paths:
+- n8n Cloud: A fully managed environment hosted and maintained by the n8n core team.
+- Self-Hosted n8n: Gives absolute control over data sovereignty by deploying the instance locally or on private servers using Docker containers or npm packages.
