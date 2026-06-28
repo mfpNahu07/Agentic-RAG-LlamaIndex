@@ -1,5 +1,6 @@
-llama-index
-llama-index-llms-gemini
-llama-index-embeddings-gemini
+llama-index-core
+llama-index-llms-google-genai
+llama-index-embeddings-google-genai
 streamlit
 python-dotenv
+pymupdf
